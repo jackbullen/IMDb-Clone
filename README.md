@@ -12,7 +12,11 @@ This is a clone of the IMDb website. It allows users to search for movies and TV
 
 ## Screenshots
 
+<img width="689" alt="Screen Shot 2023-09-22 at 11 55 07 AM" src="https://github.com/jackbullen/IMDb-Clone/assets/37254717/98f5d80b-3388-4325-b736-650a308443e1">
 
+<img width="663" alt="Screen Shot 2023-09-22 at 11 53 54 AM" src="https://github.com/jackbullen/IMDb-Clone/assets/37254717/e091dab9-0243-4728-8396-660cab1c9963">
+
+<img width="689" alt="Screen Shot 2023-09-22 at 11 56 37 AM" src="https://github.com/jackbullen/IMDb-Clone/assets/37254717/9ca411ee-60ad-4934-9dbd-cfb78b6ef6bf">
 
 ## TODO
 
