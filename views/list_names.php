@@ -5,25 +5,25 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
 
-<h1>Movies</h1>
+<h1>Names</h1>
 <form action="/" method="get">
-    <input type="hidden" name="action" value="listMovies">
-    <input type="text" name="searchQuery" id="searchInput" placeholder="Search for movies...">
+    <input type="hidden" name="action" value="listNames">
+    <input type="text" name="searchQuery" id="searchInput" placeholder="Search for names...">
     <input type="submit" value="Search">
 </form>
 
 <!-- <?php
 echo "<pre>";
-print_r($movies);
+print_r($names);
 echo "</pre>";
 ?> -->
 
-<ul id="movieList">
+<ul id="nameList">
     <?php 
     
-    if (isset($movies) && is_array($movies)):
-        foreach ($movies as $movie): ?>
-            <li><a href="?action=movieDetails&tconst=<?php echo $movie['tconst']; ?>"><?php echo $movie['primaryTitle']; ?>(<?php echo $movie['startYear']; ?>)</a></li>
+    if (isset($names) && is_array($names)):
+        foreach ($names as $name): ?>
+            <li><a href="?action=nameDetails&nconst=<?php echo $name['nconst']; ?>"><?php echo $name['primaryName']; ?></a></li>
     <?php 
         endforeach;
     endif; 
@@ -33,12 +33,12 @@ echo "</pre>";
 <?php
     $newOffset = (isset($offset) ? $offset : 0) + $limit;
     $searchQuery = $_GET['searchQuery'] ?? null;
-    $action = $_GET['action'] ?? 'listMovies';
+    $action = $_GET['action'] ?? 'listNames';
     echo "<a href='?action=$action&offset=$newOffset&limit=$limit&searchQuery=$searchQuery'>View More</a>";
 ?>
 
 <form method="GET" action="/">
-    <input type="hidden" name="action" value="listMovies">
+    <input type="hidden" name="action" value="listNames">
     <input type="hidden" name="searchQuery" value="<?php echo $_GET['searchQuery'] ?? ''; ?>">
     <label for="resultsPerPage">Results per page: </label>
     <select name="limit" id="resultsPerPage" onchange="this.form.submit()">

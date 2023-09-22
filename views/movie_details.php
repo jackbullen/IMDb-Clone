@@ -1,19 +1,24 @@
 <?php
 include 'header.php';
 ?>
-<h1><?php echo $movieDetails[0]['primaryTitle']; ?></h1>
-<p><strong>Original Title:</strong> <?php echo $movieDetails[0]['originalTitle']; ?></p>
-<p><strong>Year:</strong> <?php echo $movieDetails[0]['startYear']; ?></p>
-<h2>Reviews:</h2>
-<ul>
+<h1><?php echo $movieDetails['primaryTitle']; ?></h1>
+<p><strong>Original Title:</strong> <?php echo $movieDetails['originalTitle']; ?></p>
+<p><strong>Year:</strong> <?php echo $movieDetails['startYear']; ?></p>
+<p><strong>Runtime:</strong> <?php echo $movieDetails['runtimeMinutes']; ?> minutes</p>
+<p><strong>Genres:</strong> <?php echo $movieDetails['genres']; ?></p>
+<br>
+<p><strong>Adult:</strong> <?php echo $movieDetails['isAdult'] ? 'Yes' : 'No'; ?></p>
+<p><strong>Type:</strong> <?php echo $movieDetails['titleType']; ?></p>
+<!-- <h2>Reviews:</h2> -->
+<!-- <ul>
     <?php foreach ($movieDetails as $detail): ?>
         <li>
             <p>Rating: <?php echo $detail['rating']; ?></p>
             <p>Review: <?php echo $detail['review']; ?></p>
         </li>
     <?php endforeach; ?>
-</ul>
-
+</ul> -->
+<br>
 <h2>Add a Review:</h2>
 <form action="add_review.php" method="post">
     <input type="hidden" name="tconst" value="<?php echo $tconst; ?>">

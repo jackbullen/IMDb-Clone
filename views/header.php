@@ -8,3 +8,9 @@
     <title>IMDb</title>
 </head>
 <body>
+<nav>
+        <ul>
+            <li><a href="index.php?action=listMovies">Movies</a></li>
+            <li><a href="index.php?action=listNames">Names</a></li>
+        </ul>
+    </nav>

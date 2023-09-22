@@ -92,8 +92,8 @@ CREATE TABLE user_lists (
 CREATE TABLE list_items (
     item_id INT AUTO_INCREMENT PRIMARY KEY,
     list_id INT,
-    tconst VARCHAR(255),    -- movies or episodes
-    nconst VARCHAR(255),    -- actors or crew members
+    tconst VARCHAR(255),
+    nconst VARCHAR(255),
     date_added DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (list_id) REFERENCES user_lists(list_id),
     FOREIGN KEY (tconst) REFERENCES titles(tconst),

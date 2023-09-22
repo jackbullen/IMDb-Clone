@@ -1,24 +1,32 @@
 <?php
 
 include_once '../controllers/MoviesController.php';
+include_once '../controllers/NamesController.php';
 
-$controller = new MoviesController();
+$movieController = new MoviesController();
+$nameController = new NamesController();
 
-if (!isset($_GET['action'])) {
-    $movies = $controller->listMovies();
+$action = $_GET['action'] ?? 'listMovies';
+
+if ($action == 'listMovies') {
+    $movies = $movieController->listMovies();
 } 
-
-else if ($_GET['action'] == 'movieDetails') {
+elseif ($action == 'listNames') {
+    $names = $nameController->listNames();
+}
+elseif ($action == 'nameDetails') {
+    $nconst = $_GET['nconst'];
+    $nameDetails = $nameController->nameDetails($nconst);
+}
+elseif ($action == 'movieDetails') {
     $tconst = $_GET['tconst'];
-    $movieDetails = $controller->movieDetails($tconst);
-    include '../views/movie_details.php';
+    $movieDetails = $movieController->movieDetails($tconst);
 } 
-
-else if ($_GET['action'] == 'addReview') {
+elseif ($action == 'addReview') {
     $tconst = $_POST['tconst'];
     $review = $_POST['review'];
     $rating = $_POST['rating'];
-    $controller->addMovieReview($tconst, $review, $rating);
+    $movieController->addMovieReview($tconst, $review, $rating);
     header("Location: index.php?action=movieDetails&tconst=$tconst");
     exit();
 }

@@ -12,15 +12,13 @@ This is a clone of the IMDb website. It allows users to search for movies and TV
 
 ## Screenshots
 
-![Home Page](https://i.imgur.com/5Q3Z3ZM.png)
 
-![Search Results](https://i.imgur.com/5Q3Z3ZM.png)
 
-![Movie Page](https://i.imgur.com/5Q3Z3ZM.png)
+## TODO
 
-![TV Show Page](https://i.imgur.com/5Q3Z3ZM.png)
+- Add reviews to the movie and TV show pages
 
-![Watchlist](https://i.imgur.com/5Q3Z3ZM.png)
+- Implement user profiles, watchlists, and adding reviews.
 
 ## Getting Started
 
